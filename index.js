@@ -4,6 +4,7 @@
 // Prompts the user for each guess and keeps track of the user's remaining guesses
 
 var SmartWord = require("./word.js");
+var inquirer = require("inquirer");
 
 // array of words to randomly choose from
 var dumbWordArray = ["Nelly", "Vanessa", "Morgan", "Jeff", "Shaughn", "Ryan", "Mississippi"];
@@ -21,14 +22,33 @@ var randomSmartWord = new SmartWord(dumbRandomWord);
 var userGuesses = 10;
 
 // interact with user until they run out of guesses or they guess the word
-while (userGuesses >= 0) {
-    console.log(dumbRandomWord);
-    randomSmartWord.showWord();     //shows _
-    console.log(" Gues the word in " + userGuesses + " or less guesses.");
-    var userInput = process.argv[2];
-    randomSmartWord.letterChecker(userInput);
-    userGuesses--;
-}
+inquirer
+    .prompt([
+
+        {
+            type: "confirm",
+            message: "Do you want to play?",
+            name: "confirm"
+        }
+    ])
+    .then(function (inquirerResponse) {
+        // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
+        if (inquirerResponse.confirm) {
+            while (userGuesses >= 0) {
+                console.log(dumbRandomWord);
+                randomSmartWord.showWord();     //shows _
+                console.log(" Gues the word in " + userGuesses + " or less guesses.");
+                var userInput = process.argv[2];
+                randomSmartWord.letterChecker(userInput);
+                userGuesses--;
+            }
+        }
+        else {
+            console.log("\nBye\n");
+        }
+    });
+
+
 
 
 

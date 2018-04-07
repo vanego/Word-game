@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vanego/Word-game/issues"
   },
-  "homepage": "https://github.com/vanego/Word-game#readme"
+  "homepage": "https://github.com/vanego/Word-game#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0"
+  }
 }
