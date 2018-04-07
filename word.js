@@ -45,7 +45,6 @@ function turnDumbWordIntoSmartWord(dumbWord) {
     return smartWord;
 }
 
-
 //-------------- TESTING ---------------
 // var dumbWord = "Vanessa";
 // var smartWord = new SmartWord(dumbWord);

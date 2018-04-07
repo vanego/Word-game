@@ -1,0 +1,19 @@
+{
+  "name": "word-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanego/Word-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanego/Word-game/issues"
+  },
+  "homepage": "https://github.com/vanego/Word-game#readme"
+}
