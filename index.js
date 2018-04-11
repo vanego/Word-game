@@ -32,10 +32,9 @@ inquirer
         }
     ])
     .then(function (inquirerResponse) {
-        // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
         if (inquirerResponse.confirm) {
             while (userGuesses >= 0) {
-                console.log(dumbRandomWord);
+                // console.log(dumbRandomWord);
                 randomSmartWord.showWord();     //shows _
                 console.log(" Gues the word in " + userGuesses + " or less guesses.");
                 var userInput = process.argv[2];
